@@ -1,0 +1,32 @@
+GET http://localhost:3030/patients
+
+############
+GET http://localhost:3030/patients/2
+
+############
+
+POST http://localhost:3030/patients/new
+Content-Type: application/json
+
+{
+    "name": "sami",
+    "age": 45,
+    "sex": "f",
+    "diagnosis": "malaria",
+    "prescription" : "have a rest"
+}
+
+#############
+PATCH  http://localhost:3030/patients/6
+Content-Type: application/json
+
+{
+    "name": "sami",
+    "age": 45,
+    "sex": "m",
+    "diagnosis": "malaria",
+    "prescription": "rest for a week"
+}
+
+#############
+DELETE http://localhost:3030/patients/
